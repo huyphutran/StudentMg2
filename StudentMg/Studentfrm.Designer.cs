@@ -2,7 +2,7 @@
 
 namespace StudentMg
 {
-    partial class Form1
+    partial class Studentfrm
     {
         /// <summary>
         /// Required designer variable.
@@ -45,8 +45,6 @@ namespace StudentMg
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtcourseB = new System.Windows.Forms.TextBox();
             this.lvwstu = new System.Windows.Forms.ListView();
@@ -63,7 +61,7 @@ namespace StudentMg
             // 
             // btnadd
             // 
-            this.btnadd.Location = new System.Drawing.Point(508, 74);
+            this.btnadd.Location = new System.Drawing.Point(444, 79);
             this.btnadd.Name = "btnadd";
             this.btnadd.Size = new System.Drawing.Size(78, 22);
             this.btnadd.TabIndex = 0;
@@ -73,7 +71,7 @@ namespace StudentMg
             // 
             // btnedit
             // 
-            this.btnedit.Location = new System.Drawing.Point(508, 121);
+            this.btnedit.Location = new System.Drawing.Point(444, 126);
             this.btnedit.Name = "btnedit";
             this.btnedit.Size = new System.Drawing.Size(78, 22);
             this.btnedit.TabIndex = 1;
@@ -83,7 +81,7 @@ namespace StudentMg
             // 
             // btndel
             // 
-            this.btndel.Location = new System.Drawing.Point(508, 168);
+            this.btndel.Location = new System.Drawing.Point(444, 173);
             this.btndel.Name = "btndel";
             this.btndel.Size = new System.Drawing.Size(78, 22);
             this.btndel.TabIndex = 2;
@@ -93,12 +91,13 @@ namespace StudentMg
             // 
             // btnviewinfo
             // 
-            this.btnviewinfo.Location = new System.Drawing.Point(508, 228);
+            this.btnviewinfo.Location = new System.Drawing.Point(444, 237);
             this.btnviewinfo.Name = "btnviewinfo";
             this.btnviewinfo.Size = new System.Drawing.Size(78, 22);
             this.btnviewinfo.TabIndex = 3;
-            this.btnviewinfo.Text = "View";
+            this.btnviewinfo.Text = "Back";
             this.btnviewinfo.UseVisualStyleBackColor = true;
+            this.btnviewinfo.Click += new System.EventHandler(this.btnviewinfo_Click);
             // 
             // chkgender
             // 
@@ -147,9 +146,9 @@ namespace StudentMg
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(51, 209);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 13);
+            this.label2.Size = new System.Drawing.Size(43, 13);
             this.label2.TabIndex = 10;
-            this.label2.Text = "CoureB";
+            this.label2.Text = "Subject";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
@@ -194,32 +193,14 @@ namespace StudentMg
             this.label1.TabIndex = 17;
             this.label1.Text = "ID";
             // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(299, 393);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(78, 22);
-            this.button5.TabIndex = 18;
-            this.button5.Text = "Forward";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(175, 393);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(78, 22);
-            this.button6.TabIndex = 19;
-            this.button6.Text = "Back";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(49, 173);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(47, 13);
+            this.label6.Size = new System.Drawing.Size(54, 13);
             this.label6.TabIndex = 20;
-            this.label6.Text = "CourseA";
+            this.label6.Text = "SubjectID";
             // 
             // txtcourseB
             // 
@@ -238,13 +219,11 @@ namespace StudentMg
             this.Gender,
             this.CourseA,
             this.CourseB});
-            this.lvwstu.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.lvwstu.HideSelection = false;
-            this.lvwstu.HoverSelection = true;
             this.lvwstu.LabelEdit = true;
-            this.lvwstu.Location = new System.Drawing.Point(12, 497);
+            this.lvwstu.Location = new System.Drawing.Point(12, 445);
             this.lvwstu.Name = "lvwstu";
-            this.lvwstu.Size = new System.Drawing.Size(610, 152);
+            this.lvwstu.Size = new System.Drawing.Size(510, 191);
             this.lvwstu.TabIndex = 0;
             this.lvwstu.UseCompatibleStateImageBehavior = false;
             this.lvwstu.View = System.Windows.Forms.View.Details;
@@ -269,11 +248,11 @@ namespace StudentMg
             // 
             // CourseA
             // 
-            this.CourseA.Text = "CourseA";
+            this.CourseA.Text = "SubjectID";
             // 
             // CourseB
             // 
-            this.CourseB.Text = "CourseB";
+            this.CourseB.Text = "Subject";
             // 
             // listView1
             // 
@@ -289,16 +268,14 @@ namespace StudentMg
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
             // 
-            // Form1
+            // Studentfrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(634, 661);
+            this.ClientSize = new System.Drawing.Size(1315, 661);
             this.Controls.Add(this.lvwstu);
             this.Controls.Add(this.txtcourseB);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -314,8 +291,7 @@ namespace StudentMg
             this.Controls.Add(this.btndel);
             this.Controls.Add(this.btnedit);
             this.Controls.Add(this.btnadd);
-            this.Name = "Form1";
-            this.Text = "Id";
+            this.Name = "Studentfrm";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
@@ -340,8 +316,6 @@ namespace StudentMg
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtcourseB;
         private System.Windows.Forms.ListView lvwstu;

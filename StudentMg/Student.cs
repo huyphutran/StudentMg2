@@ -8,6 +8,7 @@ namespace StudentMg
 {
     class Student
     {
+        
         protected string mahv;
         protected string hoten;
         protected DateTime ngaysinh = new DateTime();
